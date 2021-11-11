@@ -393,7 +393,7 @@ declare module tmind {
 		toArr: (includTime?: boolean) => number[];
 	}
 
-	class TVerifi {
+	class ITVerifi {
 		constructor(val: verifiAble, fullCheck?: boolean, ...rules: tVerifi.Irule[]);
 		/** 获取当前实例校验结果
 		 */
@@ -404,7 +404,7 @@ declare module tmind {
 		 */
 		static getRules(): IObj<string>;
 
-		isNum(opt: tVerifi.Irule): TVerifi;
+		isNum(opt: tVerifi.Irule): ITVerifi;
 	}
 
 	function smpoo(): IsmpooInfo;
