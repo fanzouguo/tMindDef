@@ -70,7 +70,8 @@ const exec = async () => {
 		'git add .',
 		`git commit -m "${tDate().format('yyyy-mm-dd hh:mi:ss')}-${GIT_MEMO}"`,
 		'git push -u origin main',
-		'npm publish'
+		'npm publish',
+		'yarn add tmind-def'
 	];
 	try {
 		for (const v of _arrCmd) {
