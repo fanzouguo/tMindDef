@@ -1,6 +1,6 @@
 {
   "name": "tmind-def",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "the type definitely for tmind anything",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +8,8 @@
   "scripts": {
     "build": "node ./.dev/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tmind-def": "^1.0.3"
+  },
   "typeScriptVersion": "4.2.4"
 }
