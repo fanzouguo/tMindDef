@@ -5,7 +5,6 @@ import type * as tmindBiz from './biz';
  *
  */
 declare namespace tmind {
-
 	/** 可提供的初始化语句的对象类型
 	 *
 	 */
