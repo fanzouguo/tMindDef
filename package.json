@@ -1,0 +1,22 @@
+{
+  "name": "tmind-def",
+  "version": "1.0.1",
+  "description": "the type definitely for tmind anything",
+  "main": "index.js",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "node ./.dev/index.js"
+  },
+  "dependencies": {
+    "tmind-core": "*",
+    "tmind-dbprovider": "*",
+    "tmind-providerpostgre": "*",
+    "tmind-svr": "*",
+    "tmind-svr-biz": "*",
+    "tmind-svr-koa": "*",
+    "tmind-svr-log": "*",
+    "tmind-builder": "*"
+  },
+  "typeScriptVersion": "4.2.4"
+}
