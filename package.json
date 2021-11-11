@@ -1,6 +1,6 @@
 {
   "name": "tmind-def",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "the type definitely for tmind anything",
   "main": "index.js",
   "license": "MIT",
