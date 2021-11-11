@@ -7,6 +7,11 @@ import type * as tmindHttp from './http';
  *
  */
 declare namespace tmind {
+	/** 设置项的值类型
+	 *
+	 */
+	type settingVal = string | number | boolean | IObj<any> | string[] | number [] | boolean[] | IObj<any>[];
+
 	/** 远程请求的 GET/POST/PUT/DELETE 方法的实现定义体
 	 *
 	 */
@@ -65,6 +70,23 @@ declare namespace tmind {
 		 *
 		 */
 		del?: apiCellDef
+	}
+
+	/**
+	 *
+	 */
+	interface IConfSetting {
+		/** 系统设置项
+		 *
+		 */
+		system: {
+			smpoo: IObj<string>,
+			[key: string]: settingVal
+		},
+		// 本Setting项对应的业务或主题名称
+		[code: string]: {
+			[key: string]: settingVal
+		}
 	}
 
 	/** 支持的 SSL 文件类型
