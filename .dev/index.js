@@ -37,7 +37,7 @@ const getPath = () => {
 			return fs.readFileSync(path.resolve(dirOsUser, '.tMind'))
 				.toString()
 				.split(/\r\n|\r|\n/)
-				.filter(v => v.startsWith('ROOT_REPO='))[0];
+				.filter(v => v.startsWith('ROOT_REPO='))[0].split('=')[1];
 		} catch (error) {
 			echo.terminate('tmind-cli配置文件损坏，请重新运行 tMind-cli 工具', '严重！');
 		}
