@@ -69,16 +69,14 @@ const exec = async () => {
 	const _arrCmd = [
 		'git add .',
 		`git commit -m "${tDate().format('yyyy-mm-dd hh:mi:ss')}-${GIT_MEMO}"`,
-		'git push -u origin main'
+		'git push -u origin main',
+		'npm publish'
 	];
 	try {
 		for (const v of _arrCmd) {
 			// @ts-ignore
 			await shelljs.exec(v);
 		}
-		const sourceFile = `${process.cwd()}/docs/*`.replace(/\\\\/g, '/').replace(/\\/g, '/');
-		// @ts-ignore
-		await shelljs.exec(`scp -4 -C -r ${sourceFile} root@47.98.138.122:/ofus_file/html/nginx/www/@doc`);
 		tEcho('发布完成！\n\n', '成功', 'SUCC');
 	} catch (err) {
 		console.error(err);
